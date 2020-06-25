@@ -4,6 +4,15 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { StoriesComponent } from './stories/stories.component';
+import { FeedbackComponent } from './feedback/feedback.component';
+import { AddFeedbackComponent } from './add-feedback/add-feedback.component';
+import { AddStoriesComponent } from './add-stories/add-stories.component';
+import { FeedbackService } from './services/feedback.service';
+import { StoriesService } from './services/stories.service';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 const options = {
     apiKey: "AIzaSyAeW_5x-REWWAzcDcO-w6BAEE2B7qe1xhg",
@@ -17,15 +26,22 @@ const options = {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    StoriesComponent,
+    FeedbackComponent,
+    AddFeedbackComponent,
+    AddStoriesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(options),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    ReactiveFormsModule,
+    AngularFireAuthModule,
   ],
-  providers: [],
+  providers: [FeedbackService, StoriesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
