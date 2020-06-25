@@ -1,1 +1,16 @@
-<p>home works!</p>
+<section class="hero is-medium is-success is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Password
+      </h1>
+      <form class="field" [formGroup]="form">
+        <div class="control">
+          <input formControlName="password" class="input is-danger" type="text" placeholder="Password">
+        </div><p></p>
+        <br>
+        <button (click)="submit()" class="button is-danger">Submit</button>
+    </form>
+    </div>
+  </div>
+</section>
