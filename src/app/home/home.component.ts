@@ -30,6 +30,7 @@ form: FormGroup;
   submit() {
     if (this.form.errors) return false;
     else {
+      localStorage.setItem("password", this.password)
       this.authService.signIn(this.password).then((o) => {
         console.log(o)
         this.form.reset();
