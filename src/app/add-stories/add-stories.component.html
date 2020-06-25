@@ -1,1 +1,25 @@
-<p>add-stories works!</p>
+<section class="hero is-medium is-success is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Password
+        </h1>
+        <form class="field" [formGroup]="form">
+          <div class="control">
+            <input formControlName="title" class="input is-danger" type="text" placeholder="Title">
+          </div><br>
+          <div class="control">
+            <textarea formControlName="description" class="textarea is-danger" type="text" placeholder="Description"></textarea>
+          </div><br>
+          <div class="control">
+            <input formControlName="url" class="input is-danger" type="text" placeholder="URL?">
+          </div><br>
+          <div class="control">
+            <input formControlName="image" class="input is-danger" type="text" placeholder="Image?">
+          </div><br>
+          <br>
+          <button (click)="submit()" class="button is-danger">Submit</button>
+      </form>
+      </div>
+    </div>
+  </section>
