@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { StoriesComponent } from './stories/stories.component';
 import { FeedbackComponent } from './feedback/feedback.component';
-import { AddFeedbackComponent } from './add-feedback/add-feedback.component';
 import { AddStoriesComponent } from './add-stories/add-stories.component';
 import { FeedbackService } from './services/feedback.service';
 import { StoriesService } from './services/stories.service';
@@ -30,7 +29,6 @@ const options = {
     HomeComponent,
     StoriesComponent,
     FeedbackComponent,
-    AddFeedbackComponent,
     AddStoriesComponent
   ],
   imports: [
