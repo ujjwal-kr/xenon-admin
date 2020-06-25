@@ -11,6 +11,6 @@ export class FeedbackService {
   ) { }
 
   getFeedbacks() {
-    return this.afs.collection('feedback').valueChanges()
+    return this.afs.collection('feedback').valueChanges({idField: 'id'})
   }
 }
