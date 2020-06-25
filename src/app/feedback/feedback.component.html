@@ -1,0 +1,16 @@
+<div *ngIf="feedBacks">
+    <section class="hero is-medium is-warning is-bold" *ngFor="let item of feedBacks">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title">
+              {{item.name}}
+            </h1>
+            <h1 class="subtitle">
+                {{ item.message }}
+            </h1>
+            <p>{{ item.email }}</p>
+          </div>
+          <button class="button is-danger">Delete</button>
+        </div>
+    </section>
+</div>
