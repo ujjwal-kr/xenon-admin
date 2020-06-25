@@ -13,4 +13,8 @@ export class FeedbackService {
   getFeedbacks() {
     return this.afs.collection('feedback').valueChanges({idField: 'id'})
   }
+
+  delete(id) {
+    return this.afs.collection('feedback').doc(id).delete()
+  }
 }

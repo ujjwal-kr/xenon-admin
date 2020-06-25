@@ -25,4 +25,8 @@ password: any;
     })
   }
 
+  delete(id) {
+    return this.feedbackService.delete(id)
+  }
+
 }

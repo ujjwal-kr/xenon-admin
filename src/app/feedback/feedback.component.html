@@ -10,7 +10,7 @@
             </h1>
             <p>{{ item.email }}</p>
           </div>
-          <button class="button is-danger">Delete</button>
+          <button (click)="delete(item.id)" class="button is-danger">Delete</button>
         </div>
     </section>
 </div>

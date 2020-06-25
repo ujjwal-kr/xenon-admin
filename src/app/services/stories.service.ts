@@ -15,4 +15,8 @@ export class StoriesService {
   addStory(data) {
     return this.afs.collection('stories').add(data);
   }
+
+  deleteStory(id) {
+    return this.afs.collection('stories').doc(id).delete();
+  }
 }

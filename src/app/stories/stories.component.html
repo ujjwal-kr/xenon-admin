@@ -1,1 +1,15 @@
-<p>stories works!</p>
+<div *ngIf="stories">
+    <section class="hero is-medium is-success is-bold" *ngFor="let item of stories">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title">
+              {{ item.title }}
+            </h1>
+            <h1 class="subtitle">
+                {{ item.description }}
+            </h1>
+          </div>
+          <button (click)="delete(item.id)" class="button is-danger">Delete</button>
+        </div>
+    </section>
+</div>
