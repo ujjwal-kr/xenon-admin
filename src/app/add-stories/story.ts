@@ -4,4 +4,5 @@ export interface Story {
     url?: string;
     image?: string;
     id?: string;
+    date?: any;
 }

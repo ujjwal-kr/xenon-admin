@@ -3,6 +3,7 @@ import { AuthService } from '../services/auth.service';
 import { StoriesService } from '../services/stories.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Story } from './story';
+import * as firebase from 'firebase';
 
 @Component({
   selector: 'app-add-stories',
@@ -43,6 +44,7 @@ form: FormGroup;
       const data: Story = {
         title: this.title,
         description: this.description,
+        date: firebase.firestore.FieldValue.serverTimestamp(),
         image: this.image,
         url: this.url
       }
